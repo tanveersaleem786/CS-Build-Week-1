@@ -29,6 +29,9 @@ class GameOfLife extends React.Component {
     let newGrid = gridClone(this.state.grid);
     for(let i = 0; i < this.rows; i++) {
       for(let j = 0; j < this.cols; j++) {
+        // Math.random will give number btw 0 to 1 
+         // By multipling with 4 it will give between 0 to max 4
+         // Then Math.floor will take 1 for 1.2, 1.4 and 1.8
         if (Math.floor(Math.random() * 4) === 1) {
           newGrid[i][j] = true;
         }
