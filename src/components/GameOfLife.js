@@ -1,6 +1,8 @@
 import React from 'react';
 import Buttons from './Button';
 import Grid from './Grid';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button, ButtonGroup} from 'react-bootstrap';
 
 class GameOfLife extends React.Component {
   constructor() {
@@ -209,12 +211,19 @@ class GameOfLife extends React.Component {
           </div>
           <div className="middle">
             <div>
-              <button className="btn btn-default" onClick={this.Preset1}>Preset 1</button>
-              <button className="btn btn-default" onClick={this.Preset2}>Preset 2</button>
-              <button className="btn btn-default" onClick={this.randomize}>Random</button>
+              <div className="mb-2">
+                <Button variant="secondary" size="lg" onClick={this.Preset1}>Preset 1</Button>{' '}    
+              </div>
+              <div className="mb-2">
+                <Button variant="primary" size="lg" onClick={this.Preset2}>Preset 2</Button>{' '}    
+              </div>
+              <div className="mb-2">
+                <Button variant="secondary" size="lg" onClick={this.randomize}>Random</Button>{' '}    
+              </div>                       
             </div>
           </div>
           <div className="middle-right">
+            <p className="about">About Game</p>
             In the Game of Life, these rules examine each cell of the grid. For each cell, it counts that cell's eight neighbors (up, down, left, right, and diagonals), and then act on that result.
             <ul>
               <li><strong>If the cell is alive and has 2 or 3 neighbors, then it remains alive. Else it dies.</strong></li>
