@@ -2,7 +2,7 @@ import React from 'react';
 import Buttons from './Button';
 import Grid from './Grid';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, ButtonGroup} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 class GameOfLife extends React.Component {
   constructor() {
